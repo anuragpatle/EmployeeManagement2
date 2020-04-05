@@ -1,8 +1,10 @@
-<mat-toolbar color="primary">
-  <h1>
-    My Angular Store
-  </h1>
+<mat-toolbar class="toolbarStyle">
+  <!-- <h1 style="color: grey;">
+    <img src="../assets/imgs/pepsi.png" alt="Smiley face" height="42" width="42">
+  </h1> -->
   <button mat-button routerLink="/">Home</button>
+  <button mat-button routerLink="/manage_employees">Manage</button>
   <button mat-button routerLink="/about">About</button>
 </mat-toolbar>
+
 <router-outlet></router-outlet>

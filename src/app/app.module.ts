@@ -17,6 +17,10 @@ import {
 } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { ShowEmployeesComponent } from './manage_emps/show-employees/show-employees.component';
+import { CreateEmpComponent } from './manage_emps/create-emp/create-emp.component';
+import { ManageEmpComponent } from '@app/manage_emps/manage-emp/manage-emp.component';
+import { EmpDetailsComponent } from './manage_emps/emp-details/emp-details.component';
 
 
 
@@ -24,7 +28,12 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ManageEmpComponent,
+    ShowEmployeesComponent,
+    CreateEmpComponent,
+    ManageEmpComponent,
+    EmpDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,11 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
