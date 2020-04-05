@@ -4,7 +4,10 @@ export class Employee {
         public name: String,
         public jobTitle: String,
         public description: String,
-        public imageUrl: String) {
+        public imageUrl: String,
+        public address: string,
+        public phoneNumber: string,
+        public dateOfJoin: string) {
 
     }
 }

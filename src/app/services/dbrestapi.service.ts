@@ -31,6 +31,7 @@ export class DbRestAPI {
     var links = {};
     parts.forEach(p => {
       let section = p.split(';');
+      console.log(section);
       var url = section[0].replace(/<(.*)>/, '$1').trim();
       var name = section[1].replace(/rel="(.*)"/, '$1').trim();
       links[name] = url;
@@ -81,7 +82,7 @@ export class DbRestAPI {
     return this.httpClient.post<any>(this.SERVER_EMPLOYEE_URL, employee);
   }
 
-  getUserById(id): Observable<Employee> {
+  getEmployeeById(id): Observable<Employee> {
     return this.httpClient.get<Employee>(this.SERVER_EMPLOYEE_URL + id)
       .pipe(
         retry(1),

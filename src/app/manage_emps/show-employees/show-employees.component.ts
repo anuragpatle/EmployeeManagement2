@@ -47,7 +47,6 @@ export class ShowEmployeesComponent implements OnInit {
         this.employees = res.body;
       })
     }
-
   }
   public nextPage() {
     if (this.dbRestApiService.next !== undefined && this.dbRestApiService.next !== '') {

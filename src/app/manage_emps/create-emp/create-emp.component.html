@@ -42,6 +42,23 @@
             </div>
 
             <div class="form-group  inputRows myInlineFlex">
+                <label class="labelStyle">Address </label>
+                <input type="text" class="form-control inputFields" [(ngModel)]="employeeModel.address" name="address"
+                    id="" ngModel>
+            </div>
+
+            <div class="form-group  inputRows myInlineFlex">
+                <label class="labelStyle">Phone </label>
+                <input type="text" class="form-control inputFields" [(ngModel)]="employeeModel.phoneNumber"
+                    name="phoneNumber" id="" ngModel>
+            </div>
+            <div class="form-group  inputRows myInlineFlex">
+                <label class="labelStyle">DOJ </label>
+                <input type="text" class="form-control inputFields" [(ngModel)]="employeeModel.dateOfJoin"
+                    name="dateOfJoin" id="" ngModel>
+            </div>
+
+            <div class="form-group  inputRows myInlineFlex">
                 <label class="labelStyle">Description </label>
                 <input type="text" required #Description="ngModel"
                     [class.is-invalid]="Description.invalid && Description.touched" class="form-control inputFields"

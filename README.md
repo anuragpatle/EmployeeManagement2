@@ -1,15 +1,15 @@
-## To fill fake db
+## To populate the JSON DB
 ```
 npm run generate
 ```
 
-## To start fake backend server (at port 3000)
+## To start the JSON backend server (at port 3000)
 
 ```
 npm run server
 ```
 
-## To start application (port 4200)
+## To start the application (port 4200)
 
 ```
 ng serve
