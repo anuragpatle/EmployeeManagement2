@@ -3,6 +3,7 @@ import { DbRestAPI } from '@app/services/dbrestapi.service';
 import { timer } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
 import { takeUntil } from 'rxjs/operators';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router'
 
 
 @Component({
@@ -12,8 +13,11 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class ShowEmployeesComponent implements OnInit {
 
-  constructor(private dbRestApiService: DbRestAPI) { }
+  constructor(private dbRestApiService: DbRestAPI, private router: Router, ) { }
 
+  // goToEmpDetails(empId: string) {
+  //   this.router.navigate(['emp_details', empId]);
+  // }
 
   destroy$ = timer(5000);
 
@@ -61,6 +65,8 @@ export class ShowEmployeesComponent implements OnInit {
       this.employees = res.body;
     })
   }
+
+
 }
 
 

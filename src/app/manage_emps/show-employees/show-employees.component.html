@@ -33,7 +33,12 @@
                     </mat-card-content>
 
                     <mat-card-actions>
-                        <button mat-button class="ShowProductsButtonStyle"> View Details</button>
+                        <button [routerLink]="['/emp_details', employee.id]" mat-button
+                            class=" ShowProductsButtonStyle">
+                            View
+                            Details</button>
+                        <!-- <button (click)="goToEmpDetails(employee.id)" mat-button class="ShowProductsButtonStyle"> View
+                            Details</button> -->
                     </mat-card-actions>
 
 

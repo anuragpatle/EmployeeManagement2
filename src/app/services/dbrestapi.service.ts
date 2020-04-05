@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
-import { throwError } from 'rxjs';
+import { throwError, Observable } from 'rxjs';
 import { retry, catchError, tap } from 'rxjs/operators';
 import { Employee } from '@app/models/Employee';
 
@@ -10,16 +10,14 @@ import { Employee } from '@app/models/Employee';
   providedIn: 'root'
 })
 export class DbRestAPI {
-
-
-
-
   public first: string = "";
   public prev: string = "";
   public next: string = "";
   public last: string = "";
 
-  private SERVER_EMPLOYEE_URL = "http://localhost:3000/employees";
+  private SERVER_EMPLOYEE_URL = "http://localhost:3000/employees/";
+  http: any;
+  apiURL: string;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -83,6 +81,13 @@ export class DbRestAPI {
     return this.httpClient.post<any>(this.SERVER_EMPLOYEE_URL, employee);
   }
 
+  getUserById(id): Observable<Employee> {
+    return this.httpClient.get<Employee>(this.SERVER_EMPLOYEE_URL + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      )
+  }
 
 }
 
