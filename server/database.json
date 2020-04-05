@@ -1,0 +1,84 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "fname": "Hilda",
+            "lname": "Kuhn",
+            "jobTitle": "Dynamic Integration Manager",
+            "description": "Facere optio numquam est sunt ex voluptatem. Qui saepe nemo ut molestiae.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 2,
+            "fname": "Emilio",
+            "lname": "Runolfsson",
+            "jobTitle": "National Optimization Supervisor",
+            "description": "Animi voluptates error. Cupiditate officia qui perspiciatis quibusdam. Consequatur animi sunt. Consectetur placeat voluptatem voluptatem ab. Iusto iure commodi. Consequuntur officiis commodi dicta quod incidunt consectetur recusandae provident.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 3,
+            "fname": "Rhea",
+            "lname": "Ziemann",
+            "jobTitle": "International Infrastructure Strategist",
+            "description": "Totam corporis cupiditate ex. Quae numquam iure praesentium beatae voluptatem omnis. Ut quae est sint et ut sapiente et quia eaque. Repellat rerum ipsam recusandae modi natus fugiat.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 4,
+            "fname": "Marquis",
+            "lname": "DuBuque",
+            "jobTitle": "Dynamic Interactions Director",
+            "description": "Illum eos alias. Culpa illum ut. Ut asperiores culpa placeat est iste omnis eaque quos aspernatur. Quibusdam consequatur est eveniet asperiores sint qui unde quos porro.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 5,
+            "fname": "Payton",
+            "lname": "Stroman",
+            "jobTitle": "Principal Solutions Consultant",
+            "description": "Corrupti voluptatibus nemo exercitationem sint. Iusto nostrum rerum voluptatem error omnis quasi occaecati. Quas nobis sunt autem error sequi eos nesciunt nulla.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 6,
+            "fname": "Julian",
+            "lname": "Mueller",
+            "jobTitle": "Product Optimization Representative",
+            "description": "Consequatur rerum et et aut perferendis. Provident nihil dignissimos et sit quo. Dolor dolores sed culpa culpa sed fugiat. Aliquam consequatur numquam accusantium.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 7,
+            "fname": "Annabelle",
+            "lname": "Bins",
+            "jobTitle": "Direct Communications Planner",
+            "description": "Et est commodi ipsam et adipisci alias ipsum praesentium. Eligendi ab deserunt nihil esse et ducimus inventore. Et at reprehenderit repudiandae et animi.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 8,
+            "fname": "Melisa",
+            "lname": "Towne",
+            "jobTitle": "Dynamic Tactics Coordinator",
+            "description": "Et quaerat temporibus. Et facere laborum animi quam laudantium omnis commodi. Blanditiis sed aut aut rem et qui eius. Architecto et modi porro aspernatur est aliquid accusamus.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 9,
+            "fname": "Remington",
+            "lname": "Dicki",
+            "jobTitle": "District Operations Officer",
+            "description": "Quo ut qui sed voluptatum quasi exercitationem. Magni repudiandae aspernatur voluptas et ut aut velit dolorem. Pariatur nihil quas consequatur. Magni modi voluptates consequuntur ex delectus ad a esse odit. Libero dolores alias quos velit necessitatibus a odit ducimus aut. Qui a dolorem accusamus molestiae eos necessitatibus perspiciatis fuga.",
+            "imageUrl": "./avatar.png"
+        },
+        {
+            "id": 10,
+            "fname": "Leo",
+            "lname": "Bartell",
+            "jobTitle": "Internal Research Developer",
+            "description": "Dolor asperiores a aut accusantium. Nulla esse dolor. Ipsa id earum rerum ullam. Qui quisquam velit a sint nobis porro dicta similique. Amet architecto error. Facere dolor vero voluptatum cumque.",
+            "imageUrl": "./avatar.png"
+        }
+    ]
+}
