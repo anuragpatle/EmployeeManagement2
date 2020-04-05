@@ -20,7 +20,7 @@ export class CreateEmpComponent implements OnInit {
 
 
 
-  employeeModel = new Employee("", "", "", "", "", "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg");
+  employeeModel = new Employee("", "", "", "", "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg");
 
   onSubmit() {
     console.log(this.employeeModel);
