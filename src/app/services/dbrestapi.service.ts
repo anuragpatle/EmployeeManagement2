@@ -15,12 +15,17 @@ export class DbRestAPI {
   public next: string = "";
   public last: string = "";
 
-  private SERVER_EMPLOYEE_URL = "http://localhost:3000/employees/";
+  private SERVER_EMPLOYEE_URL = 'http://localhost:3000/employees/';
   http: any;
   apiURL: string;
 
   constructor(private httpClient: HttpClient) { }
 
+  // This is the response we will gonna recieve.
+  //
+  // <http://localhost:3000/employees/?_page=1&_limit=6>; rel="first"
+  // , <http://localhost:3000/employees/?_page=2&//_limit=6>; rel="next"
+  // , <http://localhost:3000/employees/?_page=2&_limit=6>; rel="last"
   parseLinkHeader(header: any) {
 
     if (header.length == 0) {
@@ -31,7 +36,6 @@ export class DbRestAPI {
     var links = {};
     parts.forEach(p => {
       let section = p.split(';');
-      console.log(section);
       var url = section[0].replace(/<(.*)>/, '$1').trim();
       var name = section[1].replace(/rel="(.*)"/, '$1').trim();
       links[name] = url;
@@ -49,7 +53,7 @@ export class DbRestAPI {
 
     let errorMsg = 'Unknown Error';
     if (error.error instanceof ErrorEvent) {
-      //Client side error
+      // Client side error
       errorMsg = `Error: ${error.error.message}`;
     } else {
       errorMsg = `Error Status: ${error.status}
@@ -62,15 +66,21 @@ export class DbRestAPI {
   }
 
 
+  // GET http://localhost:3000/employees?_page=1&_limit=6
   public sendGetRequest() {
-    return this.httpClient.get(this.SERVER_EMPLOYEE_URL, { params: new HttpParams({ fromString: "_page=1&_limit=6" }), observe: "response" }).pipe(retry(3), catchError(this.handleError), tap(res => {
-      console.log(res.headers.get('Link'));
-      this.parseLinkHeader(res.headers.get('Link'));
-    }));
+    return this.httpClient
+      .get(this.SERVER_EMPLOYEE_URL, {
+        params: new HttpParams({ fromString: '_page=1&_limit=6' }),
+        observe: 'response'
+      })
+      .pipe(retry(3), catchError(this.handleError), tap(res => {
+        console.log(res.headers.get('Link'));
+        this.parseLinkHeader(res.headers.get('Link'));
+      }));
   }
 
   public sendGetRequestToUrl(url: string) {
-    return this.httpClient.get(url, { observe: "response" }).pipe(retry(3),
+    return this.httpClient.get(url, { observe: 'response' }).pipe(retry(3),
       catchError(this.handleError), tap(res => {
         console.log(res.headers.get('Link'));
         this.parseLinkHeader(res.headers.get('Link'));
@@ -87,7 +97,7 @@ export class DbRestAPI {
       .pipe(
         retry(1),
         catchError(this.handleError)
-      )
+      );
   }
 
 }

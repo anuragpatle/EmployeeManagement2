@@ -99,26 +99,6 @@
       "address": "Lake Tito, 19312-9678",
       "phoneNumber": "(371) 002-1269 x415",
       "dateOfJoin": "2019-07-06T01:19:16.492Z"
-    },
-    {
-      "id": 11,
-      "name": "Anurag Patle",
-      "jobTitle": "Consultant",
-      "description": "This is a dummy description",
-      "imageUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg",
-      "address": "",
-      "phoneNumber": "",
-      "dateOfJoin": ""
-    },
-    {
-      "id": 12,
-      "name": "Anurag Patle",
-      "jobTitle": "Consultant",
-      "description": "This is a dummy description",
-      "imageUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg",
-      "address": "Sai Yash Jewel",
-      "phoneNumber": "08237770649",
-      "dateOfJoin": "12/10/2019"
     }
   ]
 }

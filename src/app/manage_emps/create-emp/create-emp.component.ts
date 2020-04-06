@@ -11,26 +11,22 @@ import { Employee } from '@app/models/Employee';
 })
 export class CreateEmpComponent implements OnInit {
 
-  constructor(private apiService: DbRestAPI,
-    private router: Router) { }
+  employeeModel = new Employee('', '', '', ''
+    , 'https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg', '', '', '2019-07-06');
+
+  constructor(private apiService: DbRestAPI, private router: Router) { }
 
   ngOnInit() {
   }
 
 
-
-
-  employeeModel = new Employee("", "", "", "", "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg", "", "", "");
-
   onSubmit() {
     console.log(this.employeeModel);
     this.apiService.sendPostRequest(this.employeeModel).subscribe(
       data => {
-        console.log('Success!: ', data);
-        window.alert("complete");
         this.router.navigate(['/show_employees']);
       },
-      error => console.error('Error!', error)), () => { window.alert("complete") }
+      error => console.error('New Employee Error!', error), () => console.log('New Employee submitted.'));
   }
 
 }

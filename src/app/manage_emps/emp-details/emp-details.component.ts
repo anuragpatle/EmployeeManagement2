@@ -21,25 +21,14 @@ export class EmpDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private service: DbRestAPI
   ) { }
 
   ngOnInit() {
 
-    // let id = this.route.snapshot.paramMap.get('id');
-    // this.service.getUserById(id).subscribe((data: any[]) => {
-    //   this.employees = data;
-    // })
-
-
-    //this.employee = this.employees[0];
-
     this.service.getEmployeeById(this.id).subscribe((data: {}) => {
       this.employeeData = data;
-    })
-
-    console.log(this.employeeData + ' dd');
+    });
 
   }
 
