@@ -1,22 +1,37 @@
-<div class="container">
+<div class="container-fluid ">
   <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <div style="padding: 13px;">
 
-        <button mat-button routerLink="/create_employees" class="ShowProductsButtonStyle">Add a new
+
+    <div class="col-sm-2">
+
+
+      <div class="sidebar">
+        <a routerLink="/create_employees">New
+          Employee</a>
+        <a style="pointer-events: none;" href="#services"> Disabled</a>
+        <a style="pointer-events: none;" href="#clients"> Disabled</a>
+      </div>
+
+      <div>
+
+        <button mat-button routerLink="/create_employees" class="">Add a new
           Employee</button>
 
       </div>
 
-      <div style="padding: 13px;">
+
+      <!-- <div style="padding: 13px;">
 
         <button mat-button routerLink="/show_employees" class="ShowProductsButtonStyle">Load Employees</button>
 
-      </div>
+      </div> -->
 
 
     </div>
+    <div class="col-sm-10">
+      <app-search-employees></app-search-employees>
+    </div>
+
 
   </div>
 </div>

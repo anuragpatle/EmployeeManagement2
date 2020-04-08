@@ -1,10 +1,46 @@
 .ShowProductsButtonStyle {
-    color: black;
-    border: 1px solid brown;
-    background: cadetblue;
-    width: 700px;
-    margin-left: 0 auto;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
+  color: black;
+  border: 1px solid brown;
+  background: cadetblue;
+  width: 700px;
+  margin-left: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #5e6063;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #dedede;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 16px;
+  }
 }

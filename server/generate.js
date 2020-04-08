@@ -7,18 +7,18 @@ var faker = require('faker');
 
 var database = { employees: [] };
 
-for (var i = 1; i <= 10; i++) {
-    database.employees.push({
-        id: i,
-        name: faker.name.firstName() + " " + faker.name.lastName(),
-        jobTitle: faker.name.jobTitle(),
-        description: faker.lorem.sentences(),
-        imageUrl: faker.image.avatar(),
-        address: faker.address.city() + ", " + faker.address.zipCode(),
-        phoneNumber: faker.phone.phoneNumber(),
-        dateOfJoin: faker.date.past()
+for (var i = 1; i <= 100; i++) {
+  database.employees.push({
+    id: i,
+    name: faker.name.firstName(),
+    jobTitle: faker.name.jobTitle(),
+    description: faker.lorem.sentences(),
+    imageUrl: faker.image.avatar(),
+    address: faker.address.city() + ", " + faker.address.zipCode(),
+    phoneNumber: faker.phone.phoneNumber(),
+    dateOfJoin: faker.date.past()
 
-    });
+  });
 }
 
 console.log(JSON.stringify(database));

@@ -1,0 +1,43 @@
+<div class="container-fluid ">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <input class="myInput" type="text" #searchInput type="text" (input)="searchEmployees(searchInput.value)"
+        placeholder="Search for names.." title="Type in a name">
+
+      <ul class="myUL" *ngIf="employees.length === 0">
+        <li><a style="pointer-events: none;">No Result</a></li>
+      </ul>
+
+      <div style="max-height: 400px;">
+        <ul class="myUL" *ngFor="let employee of employees; let i = index">
+          <li><a (click)=setSelectedEmployee(employee)> {{ employee.name }}</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+
+
+      <div *ngIf="selectedEmployee" class="searchResultCard card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{selectedEmployee.imageUrl}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{selectedEmployee.name}}</h5>
+              <p class="card-text"><small class="text-muted">{{selectedEmployee.jobTitle}}</small></p>
+              <p class="card-text">{{selectedEmployee.description}}</p>
+              <p class="card-text"><small class="text-muted">Phone: {{selectedEmployee.phoneNumber}}</small></p>
+              <p class="card-text"><small class="text-muted">DOJ:
+                  {{selectedEmployee.dateOfJoin | date: 'dd/MM/yyyy'}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -2,38 +2,45 @@
 
 @import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 
-html, body { height: 100%; }
-body {background-color: #1C272B; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .toolbarStyle {
-    background: #3b3b4f;
-    color: wheat;
+  background: #3b3b4f;
+  color: wheat;
 }
 
 .inputFields {
-    width: 300px;
+  width: 300px;
+  border: 1px solid #717a82;
 }
 
 .labelStyle {
-    float: left;
-    width: 160px;
-    margin-top: 3px;
-    padding: 6px 10px;
-    height: 38px;
-    color: wheat;
+  float: left;
+  width: 160px;
+  margin-top: 3px;
+  padding: 6px 10px;
+  height: 38px;
 }
 
 .newProductForm {
-    width: 36%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+  width: 36%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 
 .myInlineFlex {
-    display: inline-flex;
+  display: inline-flex;
 }
 
-.info {background-color: #2196F3;} /* Blue */
-
-
+.info {
+  background-color: #2196f3;
+} /* Blue */

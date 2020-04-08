@@ -100,5 +100,13 @@ export class DbRestAPI {
       );
   }
 
+  searchEmployeesByKeyword(keyword: string) {
+    return this.httpClient.get<Employee[]>(this.SERVER_EMPLOYEE_URL + '?_limit=6&q=' + keyword)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }
+
 }
 

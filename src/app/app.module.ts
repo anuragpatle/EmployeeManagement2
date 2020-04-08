@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {
   MatToolbarModule,
   MatIconModule,
@@ -21,6 +22,7 @@ import { ShowEmployeesComponent } from './manage_emps/show-employees/show-employ
 import { CreateEmpComponent } from './manage_emps/create-emp/create-emp.component';
 import { ManageEmpComponent } from '@app/manage_emps/manage-emp/manage-emp.component';
 import { EmpDetailsComponent } from './manage_emps/emp-details/emp-details.component';
+import { SearchEmployeesComponent } from './manage_emps/search-employees/search-employees.component';
 
 
 
@@ -33,7 +35,8 @@ import { EmpDetailsComponent } from './manage_emps/emp-details/emp-details.compo
     ShowEmployeesComponent,
     CreateEmpComponent,
     ManageEmpComponent,
-    EmpDetailsComponent
+    EmpDetailsComponent,
+    SearchEmployeesComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { EmpDetailsComponent } from './manage_emps/emp-details/emp-details.compo
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatGridListModule
+    MatGridListModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

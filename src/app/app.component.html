@@ -1,10 +1,20 @@
-<mat-toolbar class="toolbarStyle">
-  <!-- <h1 style="color: grey;">
-    <img src="../assets/imgs/pepsi.png" alt="Smiley face" height="42" width="42">
-  </h1> -->
-  <button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/manage_employees">Manage</button>
-  <button mat-button routerLink="/about">About</button>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/manage_employees">Manage</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
 <router-outlet></router-outlet>
